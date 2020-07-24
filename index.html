@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Régua virtual</title>
+</head>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+	}
+	.medida {
+		color: white;
+		padding-top: 0.5cm;
+		padding-left: 0.25cm;
+	}
+	.medida:nth-child(odd) {
+		background: #a599ff;
+	}
+	.medida:nth-child(even) {
+		background: #a947b9;
+	}
+	.um-centimetro {
+		height: 1cm;
+		width: 100%;
+	}
+</style>
+<body>
+
+</body>
+
+<script>
+	for (var i=1; i <= 25; i++) {
+		document.getElementsByTagName('body')[0].innerHTML+=`<div class="medida um-centimetro">${i}</div>`;
+	}
+</script>
+
+</html>
